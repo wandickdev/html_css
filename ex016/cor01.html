@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cores em CSS</title>
+    </head>
+    <body>
+        <!-- Representação de cores por nomes -->
+        <h2 style="background-color:blue; color: white;">Representação de cores por nomes</h2>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolorem sunt assumenda asperiores explicabo architecto at. Reiciendis, ratione hic officia inventore ex et accusantium sit velit delectus doloremque. Qui, odit!</p>
+        <!--         
+        Decimal     => 0 1 2 3 4 5 6 7 8 9 (10 algarismos);
+        HexaDecimal => 0 1 2 3 4 5 6 7 8 9 A B C D E F (16 algarismos, na base hexadecimal as letras são considerados algarismos, porque cada elemento do código hexadecimal tem que ser representado por um único algarismo, onde o 0 (que é o nada) é o algarismo menos significativo e o F (que é o máximo) é o mais significativo);
+        Toda cor é formada por um conjunto de 3 cores: vermelho (R de Red), verde (G de green) e azul (B de blue). E a cor do backgroun abaixo representada por #0000ff significa: 00 (nada) de vermelho, 00 (nada) de verde e ff (ou 255, que é o máximo de azul), ou seja, estes valores vão de 0 a 255;
+        Representação de cores por código hexadecimal.
+         -->
+        <h2 style="background-color:#0000ff; color: #ffffff;">Representação de cores por código hexadecimal</h2>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolorem sunt assumenda asperiores explicabo architecto at. Reiciendis, ratione hic officia inventore ex et accusantium sit velit delectus doloremque. Qui, odit!</p>
+
+        <!-- 
+        Na representação de cores usando código rgb (que é uma função das CSS's), damos valores de 0 a 255 para o r (red), para g (green) e para o b (blue) e qualquer variação entre 0 e 255 faz com que tenhamos variações destas cores e a combinação destas gera um cor específica num total de 16,7 milhões de cores.
+        O preto, que é ausência de todas as cores, ficaria assim: rgb(0, 0, 0). Ou seja 0 (nada) de vermelho, 0 (nada) de verde e 0 (nada) de azul;
+        O branco, que é a junção de todas as cores (todas as cores juntas) ficaria assim rgb(255, 255, 255). Ou seja 255 (o máximo) de vermelho, 255 (o máximo) de verde e 255 (o máximo) de de azul;
+        Representação de cores por código rgb (0-255 de Red, 0-255 de Green, 0-255 de Blue) 
+        -->
+        <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Representação de cores por código rgb</h2>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolorem sunt assumenda asperiores explicabo architecto at. Reiciendis, ratione hic officia inventore ex et accusantium sit velit delectus doloremque. Qui, odit!</p>
+        <!-- 
+        Na representação de cores usando código hsl (que é uma função das CSS's) ou por características de cores, utilizamos 3 características que toda cor tem: 
+        a) Matiz: representada pelo h (hue, que significa tom), que são diferentes gradações de uma cor (gradação sutil quase imperceptível de cores: nuance, meio-tom, tom);
+        b) Saturação: representada pelo s (saturation), que, numa escala de 0% (retira toda a intensidade da cor) a 100% (confere intensidade máxima à cor) define o quão intensa uma cor é. Esta característica trata do brilho da cor, também numa escala de 0% a 100%. A saturação controla o quanto de branco existe na cor;
+        c) Luminosidade: representada pelo l (lightness, que é luminosidade), que é a claridade da cor. É expressa em porcentagem ou fração numa escala perceptualmente uniforme, porém não comprimida, em que a cor aparece graduada do completamente enegrecido (ou apagado) ao completamente embranquecido (ou ofuscado).
+        O valor do tom é medido em ângulos expresso em graus. O valor de saturação é medido em porcentagem, sendo 0% um leve sombreado de saturação e 100% uma saturação total da cor.
+        A escolha de cores no HSL não é baseado na mistura mas sim em um esquema baseado em um cilindro. O primeiro número de valor na sintaxe é onde escolhemos a cor. Começamos no topo com vermelho, onde o valor é 0, e damos uma volta de 360 graus, retornando novamente no topo, na cor vermelha.
+        Representação de cores usando características de cores 
+        -->
+        <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Representação de cores usando características das cores (hsl)</h2>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolorem sunt assumenda asperiores explicabo architecto at. Reiciendis, ratione hic officia inventore ex et accusantium sit velit delectus doloremque. Qui, odit!</p>      
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vídeos com HTML5</title>
+    </head>
+    <body>
+        <h1>Inserindo vídeos hospedados localmente (ogv não é compatível c/ Vivaldi)</h1>
+        <p>Este vídeo está hospedado no meu próprio servidor</p>   
+        <!-- 
+        A maneira mais simples de vídeos é assim: <video src="midia/VideoWebm.webm" width="560" controls></video>. Mas preferi não fazer desta forma então: a) digitei usei a tag vídeo; b) removi sua cláusula src dentro da tag video; c) dentro tag video, inclui a tag source desta forma: <source src="midia/VideoWebm.webm" type="video/webm">
+        Os tipos de videos aceitos na maioria dos navegadores: mp4, mp4v, webm, ogv.
+        Só pra ilustrar, poderia ter colocado outros 4 sources para outros tipos de video (mp4, mp4v, ogv), a saber: 
+        a) <source src="midia/VideoMp4.mp4" type="video/mp4">
+        b) <source src="midia/VideoOrigem.mp4" type="video/mp4">
+        c) <source src="midia/VideoOgv.ogv" type="video/ogv">
+        d) <source src="midia/VideoM4v.m4v" type="video/m4v">    
+        O parágrafo abaixo só aparecerá no browser se a mídia colocada na cláusula scr da tag source não for compatível com 
+        o navegador: <p> A mídia só roda se o browser for compatível com ela </p>
+        <video width="1000" controls>
+            <source src="midia/VideoWebm.webm" width="1000" type="video/webm">
+            <p> A mídia só roda se o browser for compatível com ela </p>
+        </video>  
+        A cláusula poster é pra botar um foto de capa de abertura antes do vídeo se rodado
+        A cláusula controls é pra colocar os controles de play e de pause para o vídeo
+        A cláusula autoplay é pra colocar o vídeo pra rodar automaticamente, sem precisar usar o play (o autoplay não funciona no vivalde)
+        A cláusula loop é pra quando o vídeo terminar ele volta a rodar desde o início
+        -->     
+        <video width="560" controls poster="imagens/lirios.jpg" autoplay loop>
+            <source src="midia/VideoWebm.webm" type="video/webm">
+            <p> A mídia só roda se o browser for compatível com ela </p>
+        </video>
+        <!--	
+        Abaixo adicionamos vídeos do youtube e do vimeo (que são serviços de hospedagem de vídeos, cujo o melhor exemplo é o próprio YouTube);
+        Para inserir/incorporar um vídeo do Youtube faça o seguinte: abra o Youtube e busque por animation reel você verá vários reels, eu escolhi o 2D Animation Demo Reel 2022 (cujo link é https://www.youtube.com/watch?v=DfloaXUKr2o) do youtube e o baixei para o meu site da seguinte forma: cliquei no botão Compartilhar, depois no botão Incorporar, depois no botão Copiar e colei, no meu código HTML e o que foi copiado. 
+        Quando incorporo vídeos eu não consumo dados do servidor, mas consumo dados do Youtube, por exemplo. Assim, tenho uma economia gigantesca (o Youtube é o 2o maior buscador do mundo, só perdendo para o Google).
+        -->
+        
+        <h1>Inserindo vídeos do youtube</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DfloaXUKr2o?si=HlhKLjsKATLSYnpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!--         
+        O serviço que o Gustavo Guanabara utiliza no estodonautas é o Vimeo (https://vimeo.com/pt-br/, que é tipo o Youtube) para que somente assinantes do estudonautas possam ver os vídeos lá do estoudonautas e para manter este canal. 
+        Para inserir/incorporar um vídeo do Vimeo faça o seguinte: acesse https://vimeo.com/home, clique em assistir e pesquise por animation reel (mas pode ser qualquer tipo de vídeo) e clique em Compartilhar, depois clique em Incorporação, depois clique em Customizar, depois ative o botão Definir dimensões personalizadas para alterar o que julgar necessário, depois clique em Copiar código de incorporação e, por último, cole no seu código HTML
+        -->
+        <h1>Inserindo vídeos do vimeo</h1>
+        <iframe src="https://player.vimeo.com/video/184401111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vídeos curtos podem contar grandes histórias"></iframe>
+    </body>
+</html>

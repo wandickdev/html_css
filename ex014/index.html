@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+         Os Estilos das CSS's locais são baseados em seletores onde podemos ter um seletor para cada tag e estes estilos são válidos para todas as tag's correspondentes a tais seletores. Por exemplo, os estilos para uma tag h1 vão servir para todas as tag's h1 que houverem no código HTML. O mesmo vale para todos os outros seletores e suas tag's;
+         Aqui dentro da tag head, antes ou depois da linha da tag title, criamos a tag style e dentro dela, tudo o que for colocado determinará os estilos de todas as tag presentes na tag body.
+         Os Estilos das CSS's locais são muito mais vantajosos que os Estilos das CSS's Inline porque todos os estilos são definidos somente na tag style e o estilo de uma tag específica serve para todas as tag's do mesmo tipo.
+         Mas há 2 desvantagens nos Os Estilos das CSS's locais:
+         1) O código referente aos estilos (o conteúdo entre as tags style's) pode acabar ficando bem maior (com bem mais linhas) que o código entre as tag's body);
+         2) Se tivermos várias páginas e quiser que todas fiquem com as mesmas características (com o mesmo estilo), teremos que repetir o código entre as tag's style's para todas as páginas.
+         -->
+        <title>Estilos Locais ou Internos</title>
+        <style>
+            body{
+                background-color: rgb(178, 221, 247);
+                font-family: Courier New;
+                font-size: 15px;
+            }
+            h1{
+                background-color: cadetblue;
+                color: brown;
+            }
+            h2{
+                background-color: burlywood;
+                color: coral;
+            }
+            p{
+                text-align: justify;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!--
+        Nos estilos Inline, os estilos que configuram, que alteram as característica de uma tag são colocados todos em uma linha, separados por ponto e vírgula.
+        Nos estilos Inline das CSS's coloca-se um estilo para cada tag, e nesses estilos eu consigo modificar/configurar várias coisas, várias características, as quais ficam separadas por ponto e vírgula (como por exemplo: cor, tamanho, tipo da fonte etc). Ou seja, nos estilos Inline das CSS's, eu afeto apenas um elemento por vez, observe, por exemplo, que a cor do primeiro h1 só afetou a ele e não aos outros h1's e para afetar os outros h1's tenho que aplicar neles os mesmos estilos do primeiro h1 (imagine se tivéssemos 50 h1's, daria uma grande trabalheira ter que repetir os mesmos estilos para todos eles e o mesmo serve para as outras tag's que você tiver em sua página. E tem mais, imagine se o cliente pedir para que todos os h1's tivessem as mesmas característica(s), teríamos que fazer a mesma coisa para todos eles). 
+        Resumindo os estilos Inline das CSS's não se constituem de uma boa técnica de utilização das CSS's
+        -->        
+        <h1 >Capítulo 1</h1>
+        <h2>Capítulo 1.1</h2>
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime?</p>
+        <h2>Capítulo 1.2</h2>
+        <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam vero porro esse mollitia rem ab saepe aut sint rerum? Suscipit rem pariatur vero possimus corrupti, quos aliquam illum autem?</p>
+        <h1>Capítulo 2</h1>
+        <h2>Capítulo 2.1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime?</p>
+        <h1>Capítulo 3</h1>
+        <h2>Capítulo 3.1</h2>
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis consequuntur assumenda atque, pariatur ullam id quo distinctio, magni non reiciendis asperiores dignissimos modi dolor. Ipsam atque blanditiis quod quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure non quasi pariatur eos fugiat deleniti ipsa necessitatibus? Enim veniam dicta cum necessitatibus molestiae dolor repellat fugit sed quo illum?</p>
+    </body>
+</html>

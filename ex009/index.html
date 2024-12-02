@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>        
+        <h1>Trabalhando com Listas</h1>
+        <!-- 
+        a tag ol é a lista ordenada, li são os itens da lista (o </li> é opcional), a cláusula type indica a forma de listar (1, A, a, I, i): numérica, alfabética (maiúscula e minúscula), romana (maiúscula e minúscula); e a cláusula star indica a partir de onde começa
+        -->
+
+        <h2>Lista Ordenada</h2>
+        <ol type="i" start="4">            
+             <li>Acordar;</li>
+            <li>Escovar os dentes;</li>
+            <li>Tomar café;</li>
+            <li>Lavar roupas.</li> 
+        </ol>
+
+        <h2>Lista Não Ordenada</h2>
+        <!-- 
+        a tag ul é a lista sem preocupação com ordenação, li são os itens da lista (o </li> é opcional), a cláusula type indica o tipo de marcador (disk ou bolinha fechada, circle ou bolinha aberta e square ou quadradinho fechado)
+        -->
+        <ul type="square">
+            <li>Pão</li>
+            <li>Tomate</li>
+            <li>Manteiga</li>
+            <li>Arroz</li>
+            <li>Feijão</li>
+        </ul>
+
+        <h2>Minhas Linguagens Favoritas</h2>
+        <ol>
+            <li>Antigas</li>
+            <ul>
+                               <li>Basic</li>
+                <li>Pascal</li>
+                <li>Lisp</li>
+                <li>Cobol</li>
+                <li>Clipper</li>
+                <li>Progress</li>
+                <li>C</li> 
+            </ul>
+        </ol>
+        <ol start="2">
+            <li>Novas</li>
+            <ol>
+                <li>Não Orientadas a Objeto</li>
+                <ul>
+                   <li>Delphi</li> 
+                </ul>
+                <li> Orientadas a Objeto</li> 
+                <ul>
+                    <li>Php</li>
+                    <li>Java</li>
+                    <li>Jsp</li>
+                    <li>JavaScript</li>
+                    <li>Python</li> 
+                </ul>
+            </ol>                                                           
+        </ol>
+
+        <h2>Listas de Definições</h2>
+        <dl> 
+            <dt>HTML</dt>
+            <dd>HiperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheet</dd>
+            <dt>JS</dt>
+            <dd>JavaScript</dd>
+        </dl>
+    </body>
+</html>

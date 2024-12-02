@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gradiente em CSS</title>
+        <style>
+            *{  
+                /* 
+                Aqui, com asterisco(*) criamos configurações globais para este CSS. E com height:100%, estamos dizendo que as características que estiverem fora deste seletor (do asterisco) ocurem altura de 100% da tela, porque em caso de top ou bottom (definido no seletor body abaixo), a tela ficaria zebrada;                
+                */
+                height: 100%
+               
+            }
+            body { 
+                /* 
+                Abaixo configuramos o background do browser com gradiente, num ângulo de 45 graus: do branco ao azul, mas podemos partir: da direita (to right), da esquerda (to left), do topo (to top), de baixo (to bottom).
+                background-image: linear-gradient(to top, white, blue) ;
+                */
+                
+                background-image: linear-gradient(45deg, #2BFFF8 40%, #293333 95%) ;
+                background-attachment: fixed;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Testando Gradiente</h1>
+        
+    </body>
+</html>

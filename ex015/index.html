@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+         Nos Estilos das CSS's externos, todas as folhas de estilo das páginas ficam num arquivo .css, externo aos arquivos html que compõem as páginas. 
+         Abaixo da tag title, digite link e escolha css. Será criada a tag link em cuja cláusula href coloque o nome que você quiser para o arquivo css, mas, se quiser, pode manter o nome default (style.css). Isto deve ser feito em todas as páginas que, no site, que pretendem ter o mesmo estilo para o arquivo index, portanto, faremos a mesma coisa no arquivo pagina2.html. 
+         Agora clique neste nome, segurando a tecla CTRL e quando aparecer a janelinha: Unalbe to open ‘style.css’; com a mensagem: The editor could not be opened because the file was not found; clique no botão: Create file. Então, será criado o arquivo .css (vazio) com o nome que você colocou na cláusula href.
+         Podemos criar mais de uma linha de estilos com o objetivo que algumas páginas fiquem com um determinado estilo e outras não basta que criemos em index.html aquele novo estilo e que o utilizemos na página que desejarmos (apenas declarando-o na página que desejarmos da forma com foi ensinado acima).
+         Os estilos das CSS's externos também são baseados em seletores onde podemos ter um seletor para cada tag e estes estilos são válidos para todas as tag's correspondentes a tais seletores. Por exemplo, os estilos para uma tag h1 vão servir para todas as tag's h1 que houverem em todos os arquivos HTML nos quais for declarada a tag link mencionada acima em cuja cláusula href esteja declarado o arquivo .css mencionado acima.
+         E esta é a grande vantagem dos Estilos das CSS's externos, os quais são todos declarados num só arquivo .css externo aos html's.
+         OBS: Num mesmo arquivo html eu posso usar os 3 estilos das CSS's: inline, interno e externo. E a ordem de poder é: primeiro o inline, depois o interno e, por último, o externo.
+         -->
+        <title>Estilos Externos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 >Capítulo 1</h1>
+        <h2>Capítulo 1.1</h2>
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime?</p>
+        <h2>Capítulo 1.2</h2>
+        <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam vero porro esse mollitia rem ab saepe aut sint rerum? Suscipit rem pariatur vero possimus corrupti, quos aliquam illum autem?</p>
+        <h1>Capítulo 2</h1>
+        <h2>Capítulo 2.1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime?</p>
+        <h1>Capítulo 3</h1>
+        <h2>Capítulo 3.1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam accusamus in velit, incidunt doloremque, rerum nostrum consectetur est id voluptatum beatae, quia mollitia distinctio veniam nulla? Facilis, illum maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis consequuntur assumenda atque, pariatur ullam id quo distinctio, magni non reiciendis asperiores dignissimos modi dolor. Ipsam atque blanditiis quod quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure non quasi pariatur eos fugiat deleniti ipsa necessitatibus? Enim veniam dicta cum necessitatibus molestiae dolor repellat fugit sed quo illum?</p>
+        <p><a href="pagina2.html">Página 2-> </a></p>
+    </body>
+</html>

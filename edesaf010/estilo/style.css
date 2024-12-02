@@ -1,0 +1,209 @@
+/* A regra @charset abaixo é para que possamos usar acentos e caracteres especiais da língua portuguesa. */
+@charset "UTF8";
+/*
+Acesse https://fonts.google.com, pesquisa pela fonte bebas neue, clique sobre o nome dela, clique em Get Font e depois em  Get embebed code, clique em @import e copie o código que está entre as tag's style e agora cole logo abaixo da regra @charset acima. Depois, logo abaixo (onde está Bebas Neue: CSS class) copie o conteúdo de font-family (que é : "Bebas Neue", sans-serif;) e cole como definição da variável --font_destaque que está dentro do seletor root abaixo.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+Adicionei, da forma como está abaixo na regra @font-face, a fonte idroid.otf que está dentro da nossa pasta /fontes. Nesta regra estamos definindo uma nova fonte chamada Android a qual será usada na variável --font_android que está dentro do seletor root abaixo.
+*/
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    /*
+    O .. significa que precisamos voltar uma pasta (sair da pasta estilo onde está o arquivo style.css) para podermos entrar na pasta fontes (onde está a fonte idroid.otf), uma vez que style.css e idroid.otf estão em pastas diferentes, mas que estas pastas são ambas filhas da pasta edsaf010. Com um . eu saio da pasta estilo e com outro eu entro nas pasta fontes. 
+    */
+    font-weight: normal;
+}
+
+/* 
+O seletor root (que é uma das configuraões globais) definido abaixo está acima de todos os outros, portanto, as variáveis de cores e de fontes e tudo o que for definido neste seletor vale para todos os outros seletores. Definidas as variáveis de cores e de fontes poderemos utilizá-las nas definições dos todos os outros seletores da seguinte forma: var(--nomevar).
+*/
+:root{
+    /*variáveis de cores*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;  
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /*variáveis de fontes */
+    --font_padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font_destaque: "Bebas Neue", sans-serif;
+    --font_android: 'Android', cursive;
+}
+
+
+*{ /* Tudo o que é configurado no seletor * (que é uma das configuraões globais) vale para todos os outros seletores */
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);    
+    font-family: var(--font_padrao);
+}
+a.externo::after{ /* Aqui colocamos o emoji link (🔗) do lado direito de todos os links (tag a) que forem da class externo (faça assim: acesse https://emojipedia.org, pesquise por link, clique em link, clique em Technical Information, copie o que fica após o U+ (1F517). Se não colocarmos a \ (contrabarra) antes do código (1F517), aparecerá 1F517 do lado direito de todos os links (tag a) que forem da class externo e não o emoji (🔗). Colocando n vezes a \ (contrabarra) e o 00A0 (espaço em branco) teremos n espaços em branco, distanciando o emoji (🔗) que fica do lado direito de todos os links (tag a) que forem da class externo.*/
+    content: '\00A0\1F517';
+}
+
+header{
+    /*a cor de fundo do header é um gradiente (da --cor0 para a --cor5) rumando para a base do header */
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+header > h1{
+    color: white;    
+    font-family: var(--font_destaque);
+    font-weight: normal;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.308);
+}
+header > p{
+    font-family: var(--font_padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.308);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.637);
+}
+nav > a{
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 1s; /*tempo de de duração da mudança de cor, entre fundo e fonte, configurados no hover abaixo*/
+}
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main{
+    min-width: 300px; /* desta largura para baixo, o conteúdo da tela se adapta (simulando responsividade) */
+    max-width: 1000px; /* desta largura pra cima, o conteúdo da tela pára de crescer (simulando responsividade) */
+    margin: auto; /* independente do tamanho da tela, seu conteúdo ficará centralizado (simulando responsividade) */
+    /*margin-top: 30px;*/
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.514);    
+}
+main img{
+    width: 100%; /* as figuras se adaptarão à largura da tela (simulando responsividade) */
+}
+main img.pequena{
+    max-width: 350px;
+    width: 50%;
+    display: block; /* Mudando o tipo de caixa para box-level. O que faz de um elemento ser uma caixa do tipo box-level é sua propriedade display: block e ser uma uma caixa do tipo inline-level é sua propriedade display: inline. Mas um elemento que é uma caixa tipo box-level pode se tornar um elemento caixa tipo inline-level e vice-versa, basta que sua propriedade display seja alterada de block para inline ou vice-versa.*/
+    margin: auto;
+}
+main h1{
+    color: var(--cor5);
+    font-family: var(--font_android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2{
+    font-family: var(--font_android);
+    color: var(--cor4);
+    font-weight: normal;
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+main p{
+    margin: 15px 0px; /* margens: topo, direita, base, esquerda (é a mesma coisa que margin: 15px 0px 15px 0px;) */
+    text-align: justify;
+    text-indent: 30px; /* cria uma tabulação na 1a. linha do parágrafo */
+    font-size: 1em;
+    line-height: 2em; /* espaçamento entre as linhas do parágrafo */
+}
+main strong{ /* configurações de todas as palavras que estiverem em negrito */
+  color: var(--cor4);
+  font-weight: bold;
+}
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+
+}
+
+
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.692);
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /* Aqui colocamos o emoji check mark (✔️) substituindo a bolinha que ladeia o elemento da tag li (faça assim: acesse https://emojipedia.org, pesquise por check, clique em check mark, clique em Technical Information, copie o que fica entre os U+ (2714). Se não colocarmos a \ (contrabarra) antes do código (2714), aparecerá 2714 antes do elemento da tag li e não o emoji (✔️). Colocando n vezes a \ (contrabarra) e o 00A0 (espaço em branco) teremos n espaços em branco, distanciando o emoji (✔️) do elemento da tag li.*/
+    list-style-position: inside; /* para colocar as bolinhas (da lista li) para dentro do padding configurado/definido no elementeo aside acima*/
+    columns: 2; /*dividir a lista li em 4 colunas na tela do browser */
+}
+
+footer{
+    /*a cor de fundo do footer é um gradiente (da --cor0 para a --cor5) rumando para o topo do footer */
+    background-image: linear-gradient(to top, var(--cor0), var(--cor5));
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer > p > a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+} 
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor5);
+}

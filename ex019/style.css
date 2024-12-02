@@ -1,0 +1,32 @@
+@charset "UTF-8"; /* regra que produz compatibilidade com acentuação e com caracteres especiais */
+body{
+    background-color: rgb(73, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* h1#principal é um seletor personalizado, onde #principal é o nome de um id, que só pode ser usado para o seletor h1 e para nenhum outro seletor. O h1 abaixo é configurado diferente dos outros h1's presentes no CSS*/
+h1#principal{
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+h1{ 
+    color: rgb(10, 14, 248);
+}
+h2{
+    color: rgb(3, 92, 25);
+}
+/*.basico, .intermediario e . avancado são nomes de class presentes em seletor01.html*/
+.basico{
+    color: rgb(241, 142, 11);
+    font-weight: bold;
+}
+.intermediario{
+    color: blueviolet;
+}
+.avancado{
+    color: rgb(241, 9, 164);
+}
+.destaque{
+    background-color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+}

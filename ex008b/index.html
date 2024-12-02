@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center><h1>Outras Formatações</h1></center>        
+        <h2><u>Código Fontes</u></h2>
+        <h3>Fonte Mono Espaçada usando a tag code </h3>
+        <!-- 
+        Entre tag's code as letras ficam com fonte monoespaçada (todas ocupam o mesmo espaço)
+        -->
+        <p>O comando <code>document.getElementById('teste')</code> é do Javascript</p>
+        <h3>Texto pré-formatado, inclusive com indentação </h3>
+        <!-- 
+        Tag's pre mantém o texto do jeito que foi colocado entre elas, inclusive, se houver indentações
+        -->
+
+        <pre>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print('O número {num} é PAR')
+            else:
+                print('O número {num} é IMPAR') 
+            print('Fim do Programa')
+        </pre>
+
+        <h2><u>Citações</u></h2>
+        <h3>Citações Simples</h3>
+        <!-- 
+        Tag's q colocam, entre aspas duplas (em formato de citação simples), o texto entre elas 
+        -->
+        <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q> </p>
+        <h3>Citações Completas</h3>
+        <p>Assim fala o maior versículo da Bíblia, encontrado no livro de Ester capítulo 8, versículo 9, PALAVRA DE DEUS para nós:</p>
+        <!-- 
+        Tag's blockquote colocam o texto entre elas em formato de citações (ABNT, com texto recuado na tela e
+        com quebra de linha). E na cláusula cite (opcional) podemos colocar o link desta citação 
+        -->
+        <blockquote cite="https://bibliaportugues.com/jfa/esther/8.htm">
+            Então foram chamados os secretários do rei naquele mesmo tempo, no terceiro mês, que é o mês de sivã, no vigésimo terceiro dia; e se escreveu conforme tudo quanto Mardoqueu ordenou a respeito dos judeus, aos sátrapas, aos governadores e aos príncipes das províncias, que se estendem da Índia até a Etiópia, cento e vinte e sete províncias, a cada província segundo o seu modo de escrever, e a cada povo conforme a sua língua; como também aos judeus segundo o seu modo de escrever e conforme a tua língua.  
+        </blockquote>
+
+        <h2><u>Abreviações</u></h2>
+        <!-- 
+        Tag’s abbr permitem colocar, na sua cláusula title, um texto que explica a abreviação dentro destas tag’s, daí basta passar o mouse sobre a abreviação que será exposta, no browser, a explicação contida na tal cláusula;
+        -->
+        <p>Estou estudando <abbr title="HiperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+        <h2><u>Texto Invertido</u></h2>
+        <!-- 
+        Tag’s bdo permitem inverter um texto colocado entre elas. Na sua cláusula dir, informaremos ltf (left to rigth) para indicar que a direção de inversão do texto será da esquerda para a direita; ou rtf (rigth to left), para indicar que a direção de inversão do texto será da direita para a esquerda. Na direção ltf o texto fica como é originalmente, ou seja, o texto não muda;
+        -->   
+        <p>Estou aprendendo a a criar coisas em HTML</p>
+        <p><bdo dir="ltr">Estou aprendendo a a criar coisas em HTML</bdo></p>
+        <p><bdo dir="rtl">Estou aprendendo a a criar coisas em HTML</bdo></p>
+
+    </body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo de Hover</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* O efeito do seletor abaixo (que refere-se ao parágrado que está dentro da div), fará com que tal parágrafo desapareça  */
+            div > p{
+                display: none; /* esconde o parágrafo que está dentro da div*/
+            }
+
+            /* O efeito do seletor abaixo (que refere-se ao parágrado que está dentro da div), é o seguinte: quando o mouse for passado sobre tal parágrafo, seu estado mudará de 4 maneiras: 1) Ele aparecerá (uma vez que foi escondido/desaparecido no seletor (div > p) acima); 2) A cor de sua fonte mudará para branco; 3) A cor de seu fundo mudará para vermelho; 4) Sua largura diminuirá para 230 pixels 
+            OBS1: div > p significa que o parágrafo p é um filho da div;
+            OBS2: aqui usamos uma representação de pseudo-classe(div:hover) e de child (ou filho: div > p)  
+            */
+            div:hover > p{
+                display: block; /* mostra o parágrafo que está dentro da div (display: block; é o inverso de display: none;)*/
+                color: white;
+                background-color: red;
+                width:230px ;
+
+            }
+
+            div:hover{
+                color: red;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de Hover</h1>
+        <p>Passe o mouse sobre o texto abaixo</p>
+        <div>
+            Passe o mouse aqui
+            <p>TEXTO ESCONDIDO/DESAPARECIDO</p>        
+        </div>        
+    </body>
+</html>

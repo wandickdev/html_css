@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a{
+                color: red;
+                text-decoration: none; /* desativa o sublinhado */
+                font-weight: bold; /*coloca em negrito*/
+            } 
+            /* visited é uma subclasse que muda o estado do elemento caso ele tenha sido visitado */
+            a:visited{
+                color: darkred;
+            }
+            a:hover{
+                color: black; /* quando passar o mouse por cima a cor da fonte vai ficar preta */
+                text-decoration: underline; /*quando passar o mouse por cima vai ficar sublinhado */
+            }
+            /* active é uma subclasse que muda o estado do elemento caso ele esteja ativo (quando ele for clicado) */
+            a:active{
+                color:yellow; /* quando clicado e segurado o mouse, a cor da fonte fica amarela (soltando o mouse, a cor volta à anterior) */
+            }
+            /* 
+            Pseudo-elementos: ::before{} e ::after{}, representados c/ '::' e colocados no seletor/elemento "a", enfatizam os links (da cláusula href da tag a do código Html), ao serem colocadas a palavra LINK ladeando tais links;
+            Pseudo-elementos: ::before{} e ::after{}, representados c/ '::' e colocados na class .especial , enfatizam os link (da tag a do código Html, na qual a cláusula href é igual a "https//www.cursoemvideo.com"), ao colocar os símbolos ⇒ e ⇐ ladeando tal links;
+            OBS1: Os símbolos acima foram copiados de https://erikasarti.com/html/dingbats-simbolos-desenhos/ (no final desta página clique em Setas e +- no meio da nova página aberta encontram-se tais símbolos); 
+            OBS2: Os pseudo-elementos facilitam porque não precisou colocar a palavra Link nem os símbolos, ⇒ e ⇐, na parte do código HTML; 
+            OBS3: Os pseudo-elementos podem ser usados para: elementos, id's e class's;
+            OBS4: # = id;
+                  ' = class;
+                  : = pseudo-class;
+                  :: = pseudo-elemento;
+                  > = chidren (filho).
+            */
+            a::before{
+                content: '[Link]'; /* conteúdo = '[Link]' */
+                text-decoration: none;
+                font-weight: normal;
+                color: darkgray;
+            }
+            a::after{
+                content: '[Link]';
+                text-decoration: none;
+                font-weight: normal;
+                color: darkgray;
+            }
+            .especial{
+                background-color: darkred;
+                color: white;
+            }
+            .especial::before{
+                content: '⇒';
+            }
+            .especial::after{
+                content: '⇐';
+            }            
+        </style>
+    </head>
+    <body>
+        
+        <h1>Personalizando Links</h1>
+        <ul>
+            <!-- target="_blank" faz com que quando for dado um clique num link, seja aberta uma nova aba -->
+            <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+            <li><a href="https://youtube.com/cursoemvideo/" target="_blank">Canal do YouTube</a></li>
+            <li><a href="https//www.cursoemvideo.com" target="_blank" class="especial">Site do Curso em Vídeo</a></li>
+        </ul>        
+    </body>
+</html>

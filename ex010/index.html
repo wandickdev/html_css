@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalhando com Links</title>
+    </head> 
+    <body>
+        <!-- 
+        Link externo é um link que vai apontar pra outro site que não é nosso;
+        A tag a significa Âncora e sua cláusula:
+            a) Href é para onde o meu site vai;
+            b) Target="_blank" é para criar uma página nova (uma aba nova) para o link contido em href;
+            c) Rel="external" indica que o link contido em href é um site externo ao que eu estou.
+         -->
+        
+        <h1>Usando Links Externos</h1>
+        
+        <p>
+            Você pode acessar o 
+            <a href="https://recode.org.br/area-do-aluno/" target="_blank" rel="external">Site da RECODE</a>
+        </p>
+        <p>
+            Você pode acessar o 
+            <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">Repositório público no GitHub do Gustavo Guanabara</a>
+        </p>
+        <p>
+            Você pode acessar o 
+            <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external"> Canal no YouTube do Gustavo Guanabara </a> 
+        </p>
+ 
+        <h1>Usando Links Internos</h1>
+        <!-- 
+        Com o rel="next" e estou dizendo para o google qual será minha próxima página para que ele (o google) não tome esta decisão por si só 
+        O target="_self" indica o redirecionamento será para um item da própria página (para o próprio site que estamos desenvolvendo) e não para uma página externa, ou seja, tudo acontece na própria aba e não numa aba nova, como é o caso de target="_blank".
+        -->
+        <p>Este é um link para a <a href="pag002.html" target="_self" rel="next">Segunda página deste site</a></p>
+        <p>Este é um link para a <a href="noticias/pag003.html"  target="_self" rel="next">A página de notícias</a></p>
+
+        <h1>Usando Links p/ Downloads</h1>
+        <ul>
+            <!-- 
+            O href="# significa que é um link vazia que está lá, mas se clicarmos em cima nada acontece 
+            O href="livro/INFORMAT.pdf" vai abrir o arquivo INFORMAT.pdf (que, neste exemplo, se encontra na pasta livro) na página ao lado: file:///C:/Users/Wandick/Desktop/html_css_js/html_css/ex010/livro/INFORMAT.pdf. E nela, com um clique no botão Fazer Download, realize-se o download de INFORMAT.pdf para a pasta de download padrão do computador (outra forma de fazermos isto é clicar com o botão direito no link gerado por href="livro/INFORMAT.pdf", que é, neste caso, Baixar livro em PDF e escolher a opção Salvar Link Como).
+            Alguns navegadores realizam o download diretamente, sem abrir outra página que possua o botão Fazer Download, basta para isso, acrescentarmos à tag a, as cláusulas download="INFORMAT.pdf" e type="application/pdf" (no link https://www.iana.org/assignments/media-types/media-types.xhtml há o type para cada type (tipo de arquivo: pdf, zip etc)).
+            -->
+            <li> <a href="livro/INFORMAT.pdf">Baixar livro em PDF</a> </li>
+            <li> <a href="livro/INFORMAT.zip">Baixar livro em Zip</a> </li>
+        </ul>
+        <!-- 
+        file:///C:/Users/Wandick/Desktop/html_css_js/html_css/ex010/livro/INFORMAT.pdf
+        <a href="livro/INFORMAT.pdf" download="INFORMAT.pdf" type="application/pdf">Baixar livro em PDF</a>
+        -->
+        
+
+
+    </body>
+</html>

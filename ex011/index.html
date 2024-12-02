@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mídias em HTML5</title>
+    </head>
+    <body>
+        <h1>Imagem Dinâmica</h1>
+        <p>Tente abrir este site em dispostivos diferentes ou aumente e diminua o tamanho do seu Navegador</p>   
+        <!-- 
+        Com a tag picture podemos trabalhar com mídias de tamanhos diferentes sendo que a original é a que está na tag img (imagens/foto_g.jpg) e as menores (que devem ser colocadas sempre na ordem da menor para a maior) são as que estão na tag source, na qual, a cláusula media é o tamanho máximo em pixels da imagem, a cláusula srcset é a imagem e type é o tipo de arquivo, o qual podemos pesquisar em https://www.iana.org/assignments/media-types/media-types.xhtml. 
+        A lógica do funcionamento da tag picture é a seguinte: se a tela do browser do computador estiver maximizada será exibida a imagem maior de todas imagens/foto_g.jpg (que está na tag img), mas formos diminuindo a tela do browser do computador passará a ser exibida a imagem, imediatamente menor (imagens/foto_m.jpg) e se continuarmos diminuindo, será exibida a imagem , imediatamente inferior (imagens/foto_p.jpg)
+        -->
+        <picture>
+            <source media="(max-width: 750px)" srcset="imagens/foto_p.jpg" type="image/jpeg">
+            <source media="(max-width: 1050px)" srcset="imagens/foto_m.jpg" type="image/jpeg">
+            <img src="imagens/foto_g.jpg" alt="Imagem Flexível">
+        </picture>
+
+        <h1>Reproduzindo Áudios</h1>
+        <p>Vamos aprender a reproduzir áudios no HTML5</p>
+
+        <!--
+        A maneira mais simples de tocar áudios é assim: <audio src="midia/zula.mp3" controls autoplay></audio>. Mas preferi não fazer desta forma então: a) digitei usei a tag audio; b) removi sua cláusula src dentro da tag audio; c) dentro tag audio, inclui a tag source desta forma: <source src="midia/zula.mp3" type="audio/mpeg">
+        Os tipos de áudios aceitos na maioria dos navegadores: mp3, wav, ogg .
+        A clásula preload da tag audio pode ser igual a: a) auto => só considera o audio carregado quando todo ele for carregado (um audio muito grande pode causar problema); b) metadata => vai carregar algumas informações (nome do arquivo, data, duração...) e; c) none => não carrega nada e só toca o áudio quando clicar em play
+        Só pra ilustrar, poderia ter colocado outros 2 sources para outros tipos de áudio (ogg e wav), a saber: 
+        a) <source src="midia/zula.ogg" type="audio/ogg"> e;
+        b) <source src="midia/zula.wav" type="audio/wav">.           
+        O parágrafo abaixo só aparecerá no browser se a mídia colocada na cláusula scr da tag source (no nosso exemplo utilizamos: midia/zula.mp3) não for compatível com o navegador
+        <p> A mídia só toca se o browser for compatível com ela <a href="midia/zula.mp3">Baixe zula.mp3 aqui</a> </p>
+        -->
+
+        <audio preload="auto" autoplay controls loop>
+            <source src="midia/zula.mp3" type="audio/mpeg">       
+            <p> A mídia só toca se o browser for compatível com ela <a href="midia/zula.mp3">Baixe zula.mp3 aqui</a></p>
+        </audio>        
+    </body>
+</html>

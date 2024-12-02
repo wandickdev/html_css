@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste de Responsividade</title>
+        <style>
+            body{
+                background-color: gray;
+            }
+            main{
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                min-width: 320px; /* esta é a largura máxima de tela de celular bem antigo */
+                max-width: 800px;
+                margin: auto;
+            }
+            img{
+                width: 100%; /* o tamanho da imagem vai se adaptar ao tamanho da tela do dispositivo que usa o site */
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Testando Responsividade</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio autem, officia at dolore illo quos corrupti quibusdam id. Voluptatum maxime fugit cum, repellendus impedit ipsum temporibus voluptate necessitatibus architecto sint! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet officia, commodi qui dolor sequi eveniet ipsum quos ex optio! Nemo quis atque expedita vero, ea voluptates voluptate eligendi rem tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque incidunt dicta ratione minima corrupti cupiditate quasi inventore, et magni, error quibusdam aliquid, perspiciatis minus. Debitis iste eos cupiditate illo!</p>
+            
+            <!-- 
+            Colocamos imagens num site apenas com a tag img, mas aqui, a utilizamos encapsulada pela tag picture para usarmos as cláusulas media e srcseta da tag source, a fim de darmos responsividade à imagem (se a largura da tela for > 600px, irina-blok.jpg será mostrada, senão, irina-blok-pq.jpg será mostrada  
+            --> 
+            <picture>
+                <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+                <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+            </picture>
+            
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio autem, officia at dolore illo quos corrupti quibusdam id. Voluptatum maxime fugit cum, repellendus impedit ipsum temporibus voluptate necessitatibus architecto sint! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet officia, commodi qui dolor sequi eveniet ipsum quos ex optio! Nemo quis atque expedita vero, ea voluptates voluptate eligendi rem tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque incidunt dicta ratione minima corrupti cupiditate quasi inventore, et magni, error quibusdam aliquid, perspiciatis minus. Debitis iste eos cupiditate illo!</p>
+        </main>
+        
+    </body>
+</html>

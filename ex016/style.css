@@ -1,0 +1,32 @@
+@charset "UTF-8"; 
+/*Abaixo seletor asterisco(*) que é o seletor de configurações globais deste CSS*/
+*{    
+    font-family: Arial, Helvetica, sans-serif;
+    /*height: 100%;*/
+}
+body{
+    background-image: linear-gradient(to right, #EED9C6, #EEC4A7);
+}
+main{
+    background-color: white;
+    border-radius: 10px;
+    /*5px andando pro lado, 5px andando pra baixo, 15px de espalhamento*/
+    box-shadow: 5px 5px 15px rgba(88, 121, 146, 0.836); 
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+h1{
+    color:#F0930C;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    
+
+}
+h2{
+    color:#0F5183;
+    
+}
+p{
+    text-align: justify;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fontes em CSS</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            body{
+                /*
+                Digitando, CTRL + Barra de Espaços para font-family são exibidos grupos de fontes com 1 ou mais tipos de fontes. Estes grupos de fontes são chamados Safe combination (combinação segura de fontes) e podem ser encontradas no link https://www.w3schools.com/cssref/css_websafe_fonts.php.
+                O motivo de serem disponibilizados grupos com uma ou mais fontes é porque os dispositivos portáteis (como  celulares) tentam colocar a primeira fonte, que se não exirtir, tentam colocar a próxima, que se não exirtir tentam colocar a próxima e assim por diante, a exempo do grupo: Arial, Helvetica, sans-serif.
+                Mas pra generalizar, podemos colocar para font-family apenas sans-serif (onde será colocada qualquer fonte que não seja serifada) ou serif (onde será colocada qualquer fonte que seja serifada) ou monospace (onde será colocada qualquer fonte que seja monoespaçada).
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                */
+                  
+                /*Work Sans é uma fonte que não tem em computador nenhum, ela precisa ser importada, conforme as linhas inseridas pelo comando @import url que acima (do seletor body).
+                */
+                font-family: 'Work Sans', Arial, Helvetica, sans-serif;  
+
+                /*As medidas para font-size podem ser: 
+                1) Absolutas: 
+                   a) cm;                    
+                   b) mm; 
+                   c) in(polegada); 
+                   d) px (pixel), esta medida absoluta é a mais usada para desenvolver sites; 
+                   e) pt (ponto) e pc (paica) são medidas da tipografia de papel (não se recomenda usá-las em tela), pt é 
+                      usado para tamanho de fontes em editores como o word, por exemplo;                 
+                2) Relativas:
+                   a) em (relativa ao tamanho atual da fonte, à altura M de uma fonte), esta medida relativa é a mais usada para desenvolver sites;
+                   b) ex (relativa à altura x de uma fonte);
+                   c) rem (relativa ao tamanho atual da fonte configurada/definida no seletor body ou asterisco(*) das CSS);
+                   d) vw (view widht que relativa à largura da viewport, dependendo do tamanho da sua tela);
+                   e) vh (view height que relativa à altura da viewport, dependendo do tamanho da sua tela);
+                   f) %.                  
+                */
+                font-size: 16px;  /* Quando a propriedade font-size não aparece/não está definida no código CSS, o browser, automaticamente, usa fontes tamanho igual a 16px, que, geralmente, equivale a 1em. Assim, 2em, 3em são fontes de tamanhos múltiplos do tamanho padrão usado pelo browser, que é 16px ou 1em*/        
+
+                /* O peso da fonte é font-weigth o qual pode ter variação:
+                   1) por tipo: 
+                      a) lighter (mais leve, mais magrinha); 
+                      b) normal;
+                      c) bold;
+                      d) bolder (que é mais negrito que o bold)
+                   2) numérica: de 100 a 900, onde 100 é o lighter, 400 é o normal e por aí vai,  
+                Widht tem a ver com largura e height tem a ver com a altura 
+                */
+                font-weight: lighter;
+                
+                /*O font-style não funciona para toda fonte e pode ser italic ou normal */
+                font-style: italic;
+                /*O text-decoration é o sublinhado */
+                text-decoration: underline;
+            }
+            h1{
+                /*
+                font-family: 'Work Sans', sans-serif;
+                font-size: 3em;  
+                font-weight: bolder;
+                font-style: italic;
+                Shorhand (mãozinha) é uma propriedade em que consigo dizer várias coisas numa única linha. Assim, invés de usarmos as 4 linhas acima, usaremos a shorthand abaixo (cuja sequência de elementos é a seguinte: primeiro,font-style, depois, font-weight, depois font-size e, por último, font-family, inclusive, até podemos suprimir algum desses elementos, mas temos que manter esta sequência).
+                */
+                font: italic bolder 3em 'Work Sans', sans-serif;
+            }
+            h2{
+                font: bold 2em 'Work Sans', sans-serif;
+            }
+            p{
+               font-family: Georgia; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Trabalhando com Fontes</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis corrupti in eos, expedita assumenda neque? Deleniti rerum ab aperiam, earum autem, delectus, culpa reiciendis inventore consequuntur velit id consequatur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam optio, alias harum, placeat quisquam minus assumenda nobis minima vitae provident laudantium eius enim sint doloribus tempora nihil cumque temporibus consequuntur.
+        </p>
+        <h2>Subtítulo do Exercício</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quaerat repellendus dolores, ducimus eveniet autem ipsum ab odit eum quod praesentium optio, vel sint cupiditate cumque velit minima temporibus ipsam.</p>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fontes Externas</title>
+        <style>
+            @font-face { /* Esta regra (@font-face) tem que ser colocada quando se tratar de fonte baixada da web */
+                font-family: 'love'; /*Em font-family posso dar o nome que eu quiser para a fonte baixada*/
+                src: url('fonts/love larry ttf.ttf') format(truetype); 
+                /* O arquivo love larry ttf.ttf tem que estar na mesma pasta de font02.html */
+                font-weight: normal;
+                font-style: normal;
+                /* Tipos de format():
+                opentype (otf); se a fonte for love larry otf.otf
+                truetype (ttf); se a fonte for love larry ttf.ttf
+                embebded-opentype;
+                truetype-aat (apple advanced tipography);
+                svg. */
+            }
+            body{
+                font-family: 'love', Arial, Helvetica, sans-serif;
+            }
+            h1{
+                font-family: 'love', 'Times New Roman', Times, serif;
+                font-size: 3em;
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Título</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae repellat itaque corporis facilis sapiente eos tempore dolores earum soluta, officia incidunt laborum mollitia pariatur similique consectetur, dolor at debitis magni.
+        </p>
+        
+    </body>
+</html>

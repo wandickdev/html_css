@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head> <!-- Cabeça = configurações do seu site -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grouping Tags</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: grey;
+                margin: 10px;
+            }
+            header{
+                background-color:white;
+                margin: 10px;
+            }
+            main{
+                background-color: rgb(177, 188, 250);
+                padding: 10px;
+                margin: 10px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                
+                /* Abaixo algumas short-hand para border-radius 
+                   - border-radius: 20px; arredonda as 4 bordas de uma caixa todas com 20px
+                   - border-radius: 20px 30px; arredonda as 2 bordas de cima com 20px e as 2 bordas de baixo com 30px
+                   - border-radius: 20px 20px 10px 10px arredonda as bordas: superior esquerda, superior direita, inferior 
+                     direita; respectivamente, com 20px, 20px, 10px, 10px. */
+                box-shadow: 4px 4px 9px 0px black;
+            }
+            nav{
+                background-color: rgb(110, 110, 253);
+                box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.534);
+            }
+            nav > a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                margin-right: 30px;
+            }
+            nav > a:hover{
+                text-decoration: underline;
+            }
+            article{
+                background-color: lightgrey;
+            }
+            article > aside{
+                background-color: rgb(100, 98, 98);
+                margin: 0px;
+            }
+            footer{
+                background-color:black;
+                color:white;
+                margin: 10px;
+                text-align: center;
+            }
+            footer > h4{
+                margin-top: -5px;
+            }
+
+            div#bola{
+                height: 100px;
+                width: 100px;
+                background-color: white;
+                border-radius: 50px;                
+            }
+        </style>
+    </head>
+
+    <body>
+        <header> <!--Cabeçalho = apresentação do site. Header é considerado uma div -->
+            <h1>Meu site</h1>
+            
+            <nav>
+                <!--&nbsp é espaço em branco-->
+                <a href="#"> Link 01 </a>  
+                <a href="#"> Link 02 </a> 
+                <a href="#"> Link 03 </a> 
+                <a href="#"> Link 04 </a> 
+                <a href="#"> Link 05 </a>
+            </nav>
+        </header> 
+        
+        <main > <!--Conteuúdo principal = essência do site. Main é considerado uma div -->
+            <section id="assuntos">
+                <p>Esportes Política e Tecnologias</p>
+            </section>
+            <section id="notícias">
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum id earum quaerat animi esse, at, odit eos nisi unde veniam, minus non reprehenderit necessitatibus ea fugit? Adipisci earum labore rem!</p>
+                <article>
+                    <!-- aside é um bloco de conteúdo que referencia o conteúdo principal que o cerca, pode ou não estar numa barra lateral (sidebar) exibindo informações contextuais, assuntos relacionados, conteúdo publicitário ou um grupo de navegação secundária.-->
+                    <aside> 
+                        <p>Artigo escrito por José da Silva</p>
+                    </aside>
+                </article>
+                <article></article>
+            </section>
+        </main>
+        
+        <footer> <!-- Rodapé = links extras, quem fez o site etc. Footer é considerado uma div-->
+            <h4>Desenvolvido por CursoemVideo</h4>            
+        </footer>
+        <div id="bola">  </div>
+        
+    </body>
+</html>

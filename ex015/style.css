@@ -1,0 +1,21 @@
+/* 
+Os arquivos .css podem ter regras, as quais: a) são colocadas no início do arquivo .css; b) começam com @; c) e terminam com ponto e vírgula. 
+Abaixo, a regra charset diz que style.css vai ser compatível com UTF-8 (vai aceitar: acentos, ç, ~, ¨ etc. É claro que esta compatibilidade já está foi declarado no index.html, mas, em virtude de o arquivo style.css ser externo, então, se faz necessário que tal compatibilidade também seja declarada aqui no style.css. 
+*/
+@charset "UTF-8";
+body{
+    background-color: rgb(178, 221, 247);
+    font-family: Courier New;
+    font-size: 15px;
+}
+h1{
+    background-color: cadetblue;
+    color: brown;
+}
+h2{
+    background-color: burlywood;
+    color: coral;
+}
+p{
+    text-align: justify;
+}
